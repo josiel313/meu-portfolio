@@ -1,0 +1,369 @@
+/* ===== RESET E BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+    --primaria: #2563eb;
+    --escura: #0f172a;
+    --cinza: #64748b;
+    --clara: #f8fafc;
+    --destaque: #3b82f6;
+    --sombra: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--escura);
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--escura);
+    position: relative;
+}
+
+.titulo-secao::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primaria);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    box-shadow: var(--sombra);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--escura);
+}
+
+.logo span {
+    color: var(--primaria);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primaria);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-conteudo h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-conteudo h1 span {
+    color: var(--primaria);
+}
+
+.typing-text {
+    font-size: 1.3rem;
+    color: var(--primaria);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    min-height: 2rem;
+}
+
+.descricao {
+    font-size: 1.1rem;
+    color: var(--cinza);
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.botoes {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn.primario {
+    background: var(--primaria);
+    color: white;
+}
+
+.btn.primario:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn.secundario {
+    border: 2px solid var(--primaria);
+    color: var(--primaria);
+}
+
+.btn.secundario:hover {
+    background: var(--primaria);
+    color: white;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+    padding: 5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-container p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #334155;
+}
+
+/* ===== HABILIDADES ===== */
+.habilidades {
+    padding: 5rem 2rem;
+    background: var(--clara);
+}
+
+.skills-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: var(--primaria);
+    margin-bottom: 1rem;
+}
+
+/* ===== PROJETOS ===== */
+.projetos {
+    padding: 5rem 2rem;
+}
+
+.projetos-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.projeto-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+}
+
+.projeto-img {
+    background: linear-gradient(135deg, var(--primaria), var(--destaque));
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projeto-img i {
+    font-size: 3rem;
+    color: white;
+}
+
+.projeto-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+.projeto-card p {
+    padding: 0 1.5rem 1rem;
+    color: var(--cinza);
+}
+
+.techs {
+    padding: 0 1.5rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.techs span {
+    background: #e0e7ff;
+    color: var(--primaria);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.link-projeto {
+    display: block;
+    padding: 1rem 1.5rem 1.5rem;
+    color: var(--primaria);
+    font-weight: 600;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+    padding: 5rem 2rem;
+    background: var(--clara);
+}
+
+.contato-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contato-texto {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--cinza);
+}
+
+.contato-links {
+    display: grid;
+    gap: 1rem;
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.contato-item:hover {
+    background: var(--primaria);
+    color: white;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: var(--escura);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        display: none;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.ativo {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 2rem;
+    }
+}
